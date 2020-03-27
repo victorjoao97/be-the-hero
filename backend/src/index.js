@@ -4,6 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
+const port = process.env.PORT || 3000;
 /**
  * Necessário usar express.json() para entender o corpo em JSON
  */
@@ -15,4 +16,4 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 
-app.listen(3333);
+app.listen(port);
